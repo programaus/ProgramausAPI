@@ -4,6 +4,12 @@ humanoid = character.Humanoid
 rootpart = character.HumanoidRootPart
 camera = workspace.CurrentCamera
 
+if character:GetAttribute("fly") == nil then 
+character:SetAttribute("fly", false)
+else
+--do nothing
+end
+
 function delete(Part)
 Part:Destroy()
 print("Deleted "..Part:GetFullName())
@@ -60,11 +66,6 @@ function ap(X, Y, Z)
 character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(X, Y, Z)
 end
 
-if character:GetAttribute("fly") == nil then 
-character:SetAttribute("fly", false)
-else
---hit the griddy
-end
 function fly()
 character:SetAttribute("fly", not character:GetAttribute("fly"))
 end
