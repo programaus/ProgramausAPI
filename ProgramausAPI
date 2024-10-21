@@ -4,11 +4,15 @@ humanoid = character.Humanoid
 rootpart = character.HumanoidRootPart
 camera = workspace.CurrentCamera
 
-if character:GetAttribute("fly") == nil then 
-character:SetAttribute("fly", false)
+function PlayerAttribute(Name, Default)
+if character:GetAttribute(Name) == nil then 
+character:SetAttribute(Name, Default)
 else
 --do nothing
 end
+end
+
+PlayerAttribute("fly",false)
 
 function delete(Part)
 Part:Destroy()
