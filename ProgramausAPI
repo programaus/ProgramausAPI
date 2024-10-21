@@ -1,0 +1,82 @@
+player = game.Players.LocalPlayer 
+character = player.character
+humanoid = character.Humanoid
+rootpart = character.HumanoidRootPart
+camera = workspace.CurrentCamera
+
+function delete(Part)
+Part:Destroy()
+print("Deleted "..Part:GetFullName())
+end
+
+function deleteall(Part)
+for i, v in Part:GetChildren() do v:destroy() end
+print("Deleted all children of "..Part:GetFullName())
+end
+
+function printchildren(Part)
+print("Children of "..Part:GetFullName().." are:")
+for i, v in Part:GetChildren() do print(v) end
+print("end")
+end
+
+function create(Type, Parent)
+part = Instance.new(Type)
+part.Parent = Parent
+print("Part "..Type.." Created at "..Parent:GetFullName())
+end
+
+function resize(Part, X, Y, Z)
+Part.Size = Vector3.new((Part.Size.X + X),(Part.Size.Y + Y),(Part.Size.Z + Z))
+print(Part:GetFullName().."'s Size Increased By "..X.." "..Y.." "..Z.." Studs")
+end
+
+function move(Part, X, Y, Z)
+Part.CFrame = Part.CFrame * CFrame.new(X, Y, Z)
+print(Part:GetFullName().." Moved By "..X.." "..Y.." "..Z.." Studs")
+end
+
+function rotate(Part, X, Y, Z)
+Part.CFrame = Part.CFrame * CFrame.Angles(math.rad(X),math.rad(Y),math.rad(Z))
+print(Part:GetFullName().." Rotated "..X.." "..Y.." "..Z.." Degrees")
+end
+
+function size(Part, X, Y, Z)
+Part.Size = Vector3.new(X, Y, Z)
+print(Part:GetFullName().."'s Size Set To"..X.." "..Y.." "..Z.." Studs")
+end
+
+function position(Part, X, Y, Z)
+Part.Position = Vector3.new(X, Y, Z)
+print(Part:GetFullName().."'s Position Set To "..X.." "..Y.." "..Z)
+end
+
+function rotation(Part, X, Y, Z)
+Part.Rotation = Vector3.new(X,Y,Z)
+print(Part:GetFullName().."'s Rotation Set To "..X.." "..Y.." "..Z.." Degrees")
+end
+
+function ap(X, Y, Z)
+character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(X, Y, Z)
+end
+
+if character:GetAttribute("fly") == nil then 
+character:SetAttribute("fly", false)
+else
+--hit the griddy
+end
+function fly()
+character:SetAttribute("fly", not character:GetAttribute("fly"))
+end
+game:GetService("UserInputService").JumpRequest:connect(function()
+if character:GetAttribute("fly") then
+humanoid:ChangeState("Jumping")
+end
+end)
+
+function impulse(Part, X, Y, Z)
+local Vector3 = Vector3.new(X, Y, Z)
+Part:ApplyImpulse(Vector3)
+end
+
+print("programaus")
