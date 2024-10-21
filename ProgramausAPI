@@ -3,12 +3,13 @@ character = player.character
 humanoid = character.Humanoid
 rootpart = character.HumanoidRootPart
 camera = workspace.CurrentCamera
+--little explanation - this is for exploits, so whenever ANY function has to be called, all of this is code is ran
 
 function PlayerAttribute(Name, Default)
 if character:GetAttribute(Name) == nil then 
 character:SetAttribute(Name, Default)
 else
---do nothing
+--hi
 end
 end
 
