@@ -5,7 +5,7 @@ rootpart = character.HumanoidRootPart
 camera = workspace.CurrentCamera
 --little explanation - this is for exploits, so whenever ANY function has to be called, all of this is code is ran
 
-function PlayerAttribute(Name, Default)
+function PlayerAddAttribute(Name, Default)
 if character:GetAttribute(Name) == nil then 
 character:SetAttribute(Name, Default)
 else
@@ -13,7 +13,8 @@ else
 end
 end
 
-PlayerAttribute("fly",false)
+PlayerAddAttribute("fly",false)
+PlayerAddAttribute("noclip",false)
 
 function delete(Part)
 Part:Destroy()
