@@ -68,6 +68,17 @@ Part.Rotation = Vector3.new(X,Y,Z)
 print(Part:GetFullName().."'s Rotation Set To "..X.." "..Y.." "..Z.." Degrees")
 end
 
+function highlight(Parent, FillTransparency, FillR, FillG, FillB, OutlineTransparency, OutlineR, OutlineG, OutlineB, OnTop)
+local highlight = Instance.new("Highlight")
+highlight.Parent = Parent
+highlight.Adornee = Parent
+highlight.FillTransparency = FillTransparency
+highlight.FillColor = Color3.FromRGB(FillR, FillG, FillB)
+highlight.OutlineTransparency = OutlineTransparency
+highlight.OutlineColor = Color3.FromRGB(OutlineR, OutlineG, OutlineB)
+print("Created a Highlight with "..OutlineTransparency.." Outline Transparency, "..FillTransparency.." FillTransparency, "..OutlineR.." "..OutlineG.." "..OutlineB.." Outline Colors, "..FillR.." "..FillG.." "..FillB.." Fill Colors. AlwaysOnTop: "..OnTop)
+end
+
 function ap(X, Y, Z)
 rootpart.CFrame = rootpart.CFrame * CFrame.new(X, Y, Z)
 end
