@@ -1,4 +1,4 @@
-player = game.Players.LocalPlayer 
+player = game.Players.LocalPlayer
 character = player.character
 humanoid = character.Humanoid
 rootpart = character.HumanoidRootPart
@@ -14,7 +14,6 @@ end
 end
 
 PlayerAddAttribute("fly",false)
-PlayerAddAttribute("noclip",false)
 
 function delete(Part)
 Part:Destroy()
