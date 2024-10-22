@@ -81,7 +81,6 @@ highlight.FillTransparency = FillTransparency
 highlight.FillColor = Color3.FromRGB(FillR,FillG,FillB)
 highlight.OutlineTransparency = OutlineTransparency
 highlight.OutlineColor = Color3.FromRGB(OutlineR,OutlineG,OutlineB)
-print("Created a Highlight with "..OutlineTransparency.." Outline Transparency, "..FillTransparency.." FillTransparency, "..OutlineR.." "..OutlineG.." "..OutlineB.." Outline Colors, "..FillR.." "..FillG.." "..FillB.." Fill Colors. AlwaysOnTop: "..OnTop)
 end
 
 function ap(X, Y, Z)
