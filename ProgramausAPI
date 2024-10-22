@@ -83,8 +83,8 @@ function ap(X, Y, Z)
 rootpart.CFrame = rootpart.CFrame * CFrame.new(X, Y, Z)
 end
 
-function tp(player)
-rootpart.CFrame = game.Players:FindFirstChild(player).Character.HumanoidRootPart * CFrame.new(0,0,-2)
+function tp(Part)
+rootpart.CFrame = Part.CFrame
 end
 
 function target(player)
