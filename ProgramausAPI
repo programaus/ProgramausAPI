@@ -1,5 +1,5 @@
 player = game.Players.LocalPlayer
-character = player.character
+character= player.character
 humanoid = character.Humanoid
 rootpart = character.HumanoidRootPart
 camera = workspace.CurrentCamera
@@ -69,7 +69,15 @@ print(Part:GetFullName().."'s Rotation Set To "..X.." "..Y.." "..Z.." Degrees")
 end
 
 function ap(X, Y, Z)
-character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(X, Y, Z)
+rootpart.CFrame = rootpart.CFrame * CFrame.new(X, Y, Z)
+end
+
+function tp(player)
+rootpart.CFrame = game.Players:FindFirstChild(player).Character.HumanoidRootPart * CFrame.new(0,0,-2)
+end
+
+function target(player)
+target = game.Players:FindFirstChild(player)
 end
 
 function fly()
@@ -86,4 +94,4 @@ local Vector3 = Vector3.new(X, Y, Z)
 Part:ApplyImpulse(Vector3)
 end
 
-print("programaus")
+print("ProgramausAPI ran")
