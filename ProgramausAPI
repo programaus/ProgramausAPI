@@ -72,6 +72,11 @@ function highlight(Parent, OnTop, FillTransparency, FillR, FillG, FillB, Outline
 local highlight = Instance.new("Highlight")
 highlight.Parent = Parent
 highlight.Adornee = Parent
+if OnTop == true then
+highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+else
+highlight.DepthMode = Enum.HighlightDepthMode.Occluded
+end
 highlight.FillTransparency = FillTransparency
 highlight.FillColor = Color3.FromRGB(FillR,FillG,FillB)
 highlight.OutlineTransparency = OutlineTransparency
