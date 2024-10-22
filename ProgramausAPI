@@ -68,19 +68,15 @@ Part.Rotation = Vector3.new(X,Y,Z)
 print(Part:GetFullName().."'s Rotation Set To "..X.." "..Y.." "..Z.." Degrees")
 end
 
-function highlight(Parent, OnTop, FillTransparency, FillR, FillG, FillB, OutlineTransparency, OutlineR, OutlineG, OutlineB)
+function highlight(Parent, FillTransparency, FillR, FillG, FillB, OutlineTransparency, OutlineR, OutlineG, OutlineB)
 local highlight = Instance.new("Highlight")
 highlight.Parent = Parent
 highlight.Adornee = Parent
-if OnTop == true then
-highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-else
-highlight.DepthMode = Enum.HighlightDepthMode.Occluded
-end
 highlight.FillTransparency = FillTransparency
 highlight.FillColor = Color3.FromRGB(FillR,FillG,FillB)
 highlight.OutlineTransparency = OutlineTransparency
 highlight.OutlineColor = Color3.FromRGB(OutlineR,OutlineG,OutlineB)
+print("Created a Highlight with "..OutlineTransparency.." Outline Transparency, "..FillTransparency.." FillTransparency, "..OutlineR.." "..OutlineG.." "..OutlineB.." Outline Colors, "..FillR.." "..FillG.." "..FillB.." Fill Colors")
 end
 
 function ap(X, Y, Z)
