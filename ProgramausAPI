@@ -13,6 +13,7 @@ else
 end
 end
 
+--Any attributes you'll ever use in any function must be called here.
 PlayerAddAttribute("fly",false)
 
 function delete(Part)
