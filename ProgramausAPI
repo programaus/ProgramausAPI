@@ -15,6 +15,7 @@ end
 
 --Any attributes you'll ever use in any function must be called here.
 PlayerAddAttribute("fly",false)
+PlayerAddAttribute("noclip",true)
 
 function delete(Part)
 Part:Destroy()
@@ -99,6 +100,10 @@ if character:GetAttribute("fly") then
 humanoid:ChangeState("Jumping")
 end
 end)
+
+function noclip()
+--placeholder
+end
 
 function impulse(Part, X, Y, Z)
 local Vector3 = Vector3.new(X, Y, Z)
