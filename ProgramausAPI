@@ -83,7 +83,7 @@ highlight.FillTransparency = FillTransparency
 highlight.FillColor = FillColor2.Color
 highlight.OutlineTransparency = OutlineTransparency
 highlight.OutlineColor = OutlineColor2.Color
-print("Created a Highlight with "..OutlineTransparency.." Outline Transparency, "..FillTransparency.." FillTransparency, ".. OutlineColor2.." Outline Colors, "..FillColor2.." Fill Colors, And is always on top: "..AlwaysOnTop)
+print("Created a Highlight with "..OutlineTransparency.." Outline Transparency, "..FillTransparency.." FillTransparency, ".. OutlineColor2.." Outline Colors, "..FillColor2.." Fill Colors")
 end
 
 function tp(Part)
