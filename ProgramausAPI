@@ -69,8 +69,6 @@ print(Part:GetFullName().."'s Rotation Set To "..X.." "..Y.." "..Z.." Degrees")
 end
 
 function highlight(Parent, AlwaysOnTop, FillTransparency, FillColor, OutlineTransparency, OutlineColor)
-local FillColor2 = BrickColor.New(FillColor)
-local OutlineColor2 = BrickColor.New(OutlineColor)
 local highlight = Instance.new("Highlight")
 highlight.Parent = Parent
 highlight.Adornee = Parent
@@ -80,9 +78,9 @@ else
 highlight.DepthMode = Enum.HighlightDepthMode.Occluded
 end
 highlight.FillTransparency = FillTransparency
-highlight.FillColor = FillColor2.Color
+highlight.FillColor = BrickColor(FillColor).Color
 highlight.OutlineTransparency = OutlineTransparency
-highlight.OutlineColor = OutlineColor2.Color
+highlight.OutlineColor = BrickColor(OutlineColor).Color
 end
 
 function tp(Part)
