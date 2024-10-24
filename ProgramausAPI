@@ -102,21 +102,7 @@ end
 end)
 
 function noclip()
-if player:GetAttribute("noclip") == false then
-player:SetAttribute("noclip", true)
-for i, v in character:GetChildren() do
-if v:IsA("Part") then
-v.CanCollide = false
-else --h end
-end
-else
-player:SetAttribute("noclip", false)
-for i, v in character:GetChildren() do
-if v:IsA("Part") then
-v.CanCollide = true
-else --h end
-end
-end
+--help
 end
 
 function impulse(Part, X, Y, Z)
